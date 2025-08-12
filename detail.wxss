@@ -1,0 +1,156 @@
+.page-container {
+  background: #fff;
+  min-height: 100vh;
+}
+
+/* 课程封面添加阴影和光泽效果 */
+.course-cover {
+  width: 100%;
+  height: 600rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1), 
+              0 0 20rpx rgba(255, 255, 255, 0.3) inset; /* 内发光效果 */
+  transition: all 0.3s ease; /* 过渡动画 */
+}
+
+.course-cover:hover {
+  transform: scale(1.01); /* 放大效果 */
+  box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, 0.2), 
+              0 0 30rpx rgba(255, 255, 255, 0.5) inset; /* 悬停内发光效果 */
+}
+
+/* 报名按钮添加悬停动画和光泽效果 */
+.apply-btn {
+  width: 90%;
+  margin: 40rpx auto;
+  background: #4dabf7;
+  color: #fff;
+  font-size: 32rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1), 
+              0 0 20rpx rgba(255, 255, 255, 0.3) inset; /* 内发光效果 */
+  transition: all 0.3s ease; /* 过渡动画 */
+}
+
+.apply-btn:hover {
+  background-color: #096dd9;
+  transform: translateY(-3rpx); /* 向上移动 */
+  box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, 0.2), 
+              0 0 30rpx rgba(255, 255, 255, 0.5) inset; /* 悬停内发光效果 */
+}
+
+.course-info {
+  padding: 32rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.course-title {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 24rpx;
+}
+
+.badge-group {
+  display: flex;
+  gap: 16rpx;
+  margin-bottom: 24rpx;
+}
+
+.badge {
+  padding: 8rpx 16rpx;
+  border-radius: 12rpx;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.info-row {
+  font-size: 24rpx;
+  color: var(--sub-text-color);
+  line-height: 1.6;
+}
+
+.section {
+  padding: 32rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 24rpx;
+}
+
+.teacher-info {
+  display: flex;
+  align-items: center;
+  gap: 32rpx;
+}
+
+.teacher-avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.teacher-desc {
+  flex: 1;
+}
+
+.teacher-name {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 8rpx;
+}
+
+.teacher-exp {
+  font-size: 24rpx;
+  color: var(--sub-text-color);
+  margin-bottom: 8rpx;
+}
+
+.teacher-intro {
+  font-size: 24rpx;
+  color: #888;
+  line-height: 1.5;
+}
+
+.outline-item {
+  margin-bottom: 24rpx;
+  padding: 24rpx;
+  background: #f8f9fa;
+  border-radius: 16rpx;
+}
+
+.outline-title {
+  font-size: 28rpx;
+  color: var(--text-color);
+  margin-bottom: 8rpx;
+}
+
+.outline-desc {
+  font-size: 24rpx;
+  color: var(--sub-text-color);
+  line-height: 1.5;
+}
+
+.apply-btn {
+  width: 90%;
+  margin: 40rpx auto;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 32rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.apply-btn:hover {
+  background-color: #096dd9;
+}
+.page-container {
+  padding-bottom: 120rpx; /* 留出 tabBar 空间 */
+}

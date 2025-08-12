@@ -1,0 +1,289 @@
+/* pages/user/center/center.wxss */
+/* 页面容器样式 */
+.page-container {
+  /* 设置页面背景为从 #0D47A1 到 #5B21B6 的线性渐变，形成蓝紫色背景效果 */
+  background: linear-gradient(to bottom, #0D47A1, #5B21B6); 
+  /* 确保页面容器的最小高度为视口高度，保证背景能覆盖整个可视区域 */
+  min-height: 100vh;
+  /* 在页面底部添加内边距，为底部导航栏留出空间，避免内容被遮挡 */
+  padding-bottom: 120rpx; 
+  /* 保证背景覆盖整个区域，使用 Flexbox 布局，子元素垂直排列 */
+  display: flex;
+  flex-direction: column;
+}
+
+/* 用户信息区域样式 */
+.user-info {
+  /* 设置用户信息区域的背景为半透明白色，rgba 中的 0.8 表示透明度 */
+  background: rgba(255, 255, 255, 0.8); 
+  /* 为用户信息区域添加内边距，使内容与边框有一定间隔 */
+  padding: 40rpx 32rpx;
+  /* 使用 Flexbox 布局，让子元素水平排列并垂直居中对齐 */
+  display: flex;
+  align-items: center;
+  /* 设置子元素之间的间距为 32rpx */
+  gap: 32rpx;
+  /* 为用户信息区域添加外边距，左右外边距为 30rpx */
+  margin: 30rpx; 
+  /* 增加用户信息区域距离屏幕顶部的外边距为 60rpx */
+  margin-top: 60rpx; 
+  /* 设置用户信息区域距离下方元素的外边距为 10rpx */
+  margin-bottom: 10rpx;
+  /* 为用户信息区域添加圆角边框，使区域边缘更圆润 */
+  border-radius: 20rpx; 
+  /* 为用户信息区域添加阴影效果，模拟浮空的视觉感受 */
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.15); 
+}
+
+/* 通用的板块区域样式 */
+.section {
+  /* 设置板块区域的背景为半透明白色，rgba 中的 0.8 表示透明度 */
+  background: rgba(255, 255, 255, 0.8); 
+  /* 为板块区域添加内边距，使内容与边框有一定间隔 */
+  padding: 32rpx;
+  /* 为板块区域添加外边距，左右外边距为 30rpx */
+  margin: 30rpx; 
+  /* 设置板块区域距离下方元素的外边距为 10rpx */
+  margin-bottom: 10rpx;
+  /* 为板块区域添加圆角边框，使区域边缘更圆润 */
+  border-radius: 20rpx; 
+  /* 为板块区域添加阴影效果，模拟浮空的视觉感受 */
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.15); 
+}
+
+/* 用户头像样式 */
+.user-avatar {
+  /* 设置用户头像的宽度为 120rpx */
+  width: 120rpx;
+  /* 设置用户头像的高度为 120rpx */
+  height: 120rpx;
+  /* 将用户头像设置为圆形，通过 50% 的圆角实现 */
+  border-radius: 50%;
+}
+
+/* 用户描述区域样式 */
+.user-desc {
+  /* 让用户描述区域在 Flexbox 布局中占据剩余的可用空间 */
+  flex: 1;
+}
+
+/* 用户姓名样式 */
+.user-name {
+  /* 设置用户姓名的字体大小为 32rpx */
+  font-size: 32rpx;
+  /* 设置用户姓名的字体粗细为 500，中等粗细 */
+  font-weight: 500;
+  /* 设置用户姓名的字体颜色为深灰色 */
+  color: #222;
+  /* 在用户姓名下方添加 8rpx 的外边距，分隔与下方内容 */
+  margin-bottom: 8rpx;
+}
+
+/* 用户邮箱样式 */
+.user-email {
+  /* 设置用户邮箱的字体大小为 24rpx */
+  font-size: 24rpx;
+  /* 设置用户邮箱的字体颜色为浅灰色 */
+  color: #666;
+}
+
+/* 退出登录按钮样式 */
+.logout-btn {
+  /* 设置退出登录按钮的字体大小为 24rpx */
+  font-size: 24rpx;
+  /* 设置退出登录按钮的字体颜色为蓝色 */
+  color: #409eff;
+  /* 为退出登录按钮添加蓝色边框，边框宽度为 1rpx */
+  border: 1rpx solid #409eff;
+  /* 为退出登录按钮添加圆角边框，使按钮边缘更圆润 */
+  border-radius: 10rpx;
+  /* 为退出登录按钮添加内边距，使文字与边框有一定间隔 */
+  padding: 10rpx 20rpx;
+}
+
+/* 通用的板块区域样式（重复部分，可考虑合并） */
+.section {
+  /* 设置板块区域的背景为半透明白色，rgba 中的 0.8 表示透明度 */
+  background: rgba(255, 255, 255, 0.8); 
+  /* 为板块区域添加内边距，使内容与边框有一定间隔 */
+  padding: 32rpx;
+  /* 为板块区域添加外边距，左右外边距为 30rpx */
+  margin: 30rpx; 
+  /* 设置板块区域距离下方元素的外边距为 10rpx */
+  margin-bottom: 10rpx;
+  /* 为板块区域添加圆角边框，使区域边缘更圆润 */
+  border-radius: 20rpx; 
+  /* 为板块区域添加阴影效果，模拟浮空的视觉感受 */
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.15); 
+}
+
+/* 板块头部样式 */
+.section-header {
+  /* 使用 Flexbox 布局，让子元素水平排列并两端对齐 */
+  display: flex;
+  justify-content: space-between;
+  /* 让子元素在垂直方向上居中对齐 */
+  align-items: center;
+  /* 在板块头部下方添加 5rpx 的外边距，分隔与下方内容 */
+  margin-bottom: 5rpx;
+}
+
+/* 板块标题样式 */
+.section-title {
+  /* 设置板块标题的字体大小为 32rpx */
+  font-size: 32rpx;
+  /* 设置板块标题的字体粗细为 500，中等粗细 */
+  font-weight: 500;
+  /* 设置板块标题的字体颜色为蓝色 */
+  color: rgb(42, 5, 255);
+}
+
+/* 查看更多文字样式 */
+.more-text {
+  /* 设置查看更多文字的字体大小为 28rpx */
+  font-size: 28rpx;
+  /* 设置查看更多文字的字体颜色为浅灰色 */
+  color: #666;
+}
+
+/* 课程列表样式 */
+.course-list {
+  /* 使用 Flexbox 布局，让课程卡片水平排列 */
+  display: flex;
+  /* 设置课程卡片之间的间距为 32rpx */
+  gap: 32rpx;
+  /* 允许课程列表在水平方向上滚动，当内容超出容器宽度时显示滚动条 */
+  overflow-x: auto;
+  /* 在 iOS 设备上启用平滑滚动效果 */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 课程卡片样式 */
+.course-card {
+  /* 设置课程卡片的宽度为 650rpx，与首页卡片宽度保持一致 */
+  width: 650rpx; 
+  /* 设置课程卡片的背景为蓝紫色半透明，rgba 中的 0.3 表示透明度 */
+  background: rgba(93, 59, 213, 0.3); 
+  /* 为课程卡片添加圆角边框，使卡片边缘更圆润 */
+  border-radius: 12rpx; 
+  /* 为课程卡片添加阴影效果，模拟浮空的视觉感受 */
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.15); 
+  /* 为课程卡片添加内边距，使内容与边框有一定间隔 */
+  padding: 10rpx;
+  /* 将课程卡片内的文字居中对齐 */
+  text-align: center;
+  /* 设置课程卡片的定位方式为相对定位 */
+  position: relative;
+  /* 为课程卡片添加左右外边距，各为 10rpx */
+  margin: 0 10rpx; 
+}
+
+/* 课程封面图片样式 */
+.course-cover {
+  /* 设置课程封面图片的宽度为 280rpx */
+  width: 280rpx;
+  /* 设置课程封面图片的高度为 180rpx */
+  height: 180rpx;
+  /* 为课程封面图片添加圆角边框，使图片边缘更圆润 */
+  border-radius: 10rpx;
+  /* 在课程封面图片下方添加 10rpx 的外边距，分隔与下方内容 */
+  margin-bottom: 10rpx;
+}
+
+/* 课程标题样式 */
+.course-title { 
+  /* 设置课程标题的字体大小为 28rpx */
+  font-size: 28rpx; 
+  /* 设置课程标题的字体粗细为 600，稍粗 */
+  font-weight: 600;
+  /* 在课程标题下方添加 5rpx 的外边距，分隔与下方内容 */
+  margin-bottom: 5rpx; 
+}
+
+/* 课程元信息样式 */
+.course-meta { 
+  /* 设置课程元信息的字体大小为 24rpx */
+  font-size: 24rpx; 
+  /* 设置课程元信息的字体颜色为浅灰色 */
+  color: #999;
+}
+
+/* 学习记录项样式 */
+.record-item {
+  /* 为学习记录项添加内边距，使内容与边框有一定间隔 */
+  padding: 30rpx;
+  /* 设置学习记录项的背景为浅灰色 */
+  background: #f8f9fa;
+  /* 为学习记录项添加圆角边框，使记录项边缘更圆润 */
+  border-radius: 19rpx;
+  /* 在学习记录项下方添加 16rpx 的外边距，分隔与下方记录项 */
+  margin-bottom: 15rpx;
+  /* 使用 Flexbox 布局，让子元素水平排列并两端对齐 */
+  display: flex;
+  justify-content: space-between;
+  /* 让子元素在垂直方向上居中对齐 */
+  align-items: center;
+}
+
+/* 学习记录标题样式 */
+.record-title {
+  /* 设置学习记录标题的字体大小为 28rpx */
+  font-size: 28rpx;
+  /* 设置学习记录标题的字体颜色为深灰色 */
+  color: #222;
+}
+
+/* 学习记录时间样式 */
+.record-time {
+  /* 设置学习记录时间的字体大小为 24rpx */
+  font-size: 24rpx;
+  /* 设置学习记录时间的字体颜色为浅灰色 */
+  color: #666;
+}
+
+/* 底部导航栏样式 */
+.bottom-nav {
+  /* 使用 Flexbox 布局，让导航项水平均匀分布 */
+  display: flex;
+  justify-content: space-around;
+  /* 为底部导航栏添加上下内边距，各为 20rpx */
+  padding: 20rpx 0;
+  /* 设置底部导航栏的背景为白色 */
+  background: white;
+  /* 为底部导航栏添加顶部边框，边框颜色为浅灰色，宽度为 1rpx */
+  border-top: 1rpx solid #eee;
+  /* 将底部导航栏固定在页面底部 */
+  position: fixed;
+  bottom: 0;
+  /* 设置底部导航栏的宽度为 100%，覆盖整个页面宽度 */
+  width: 100%;
+  /* 设置底部导航栏的层级为 100，确保它显示在其他元素之上 */
+  z-index: 100;
+}
+
+/* 导航项样式 */
+.nav-item {
+  /* 使用 Flexbox 布局，让导航图标和文字垂直排列 */
+  display: flex;
+  flex-direction: column;
+  /* 让导航图标和文字在水平方向上居中对齐 */
+  align-items: center;
+}
+
+/* 导航图标样式 */
+.nav-icon {
+  /* 设置导航图标的宽度为 40rpx */
+  width: 40rpx;
+  /* 设置导航图标的高度为 40rpx */
+  height: 40rpx;
+  /* 在导航图标下方添加 5rpx 的外边距，分隔与下方文字 */
+  margin-bottom: 5rpx;
+}
+
+/* 导航标签样式 */
+.nav-label {
+  /* 设置导航标签的字体大小为 24rpx */
+  font-size: 24rpx;
+  /* 设置导航标签的字体颜色为浅灰色 */
+  color: #666;
+}

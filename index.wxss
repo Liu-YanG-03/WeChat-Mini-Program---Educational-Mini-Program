@@ -1,0 +1,307 @@
+.page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0D47A1, #5B21B6); /* 全局蓝紫渐变背景 */
+}
+
+/* 顶部区域 - 增加透明度渐变，使顶部颜色更深 */
+.top-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600rpx;
+  background: linear-gradient(to bottom, rgba(9, 35, 82, 0.8), transparent);
+  z-index: 0;
+}
+
+/* 顶部搜索栏 */
+.top-bar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+  padding-top: 40rpx; /* 适配刘海屏 */
+  color: white;
+}
+
+.search-page {
+  padding: 20rpx;
+}
+
+.no-result {
+  text-align: center;
+  padding: 50rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.top-bar .search-wrap {
+  width: 600rpx !important; /* 增加!important强制覆盖 */
+  flex: 0 0 570rpx; /* 固定宽度，不伸缩 */
+}
+
+.search-wrap {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  width: 500rpx;
+  height: 70rpx;
+  background: rgba(255, 255, 255, 0.95); /* 半透明白色 */
+  border-radius: 35rpx;
+  padding: 0 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.15); 
+}
+
+.search-icon { width: 40rpx; height: 40rpx; margin-right: 10rpx; }
+.search-input { 
+  flex: 1; 
+  font-size: 28rpx; 
+  color: #333; 
+  background: transparent;
+  border: none;
+}
+.search-input::placeholder { color: #999; }
+
+.notify-icon { width: 40rpx; height: 40rpx; }
+
+
+/* 取消按钮样式 */
+.cancel-btn {
+  right: 5rpx; /* 右侧距离，可调整 */
+  top: 38%; /* 垂直居中 */
+  transform: translateY(-50%); /* 垂直居中 */
+  background: none; /* 去除背景 */
+  border: none; /* 去除边框 */
+  outline: none; /*去除聚焦时的外边框 */
+  width: 55rpx; /* 按钮宽度，可调整 */
+  height: 55rpx; /* 按钮高度，可调整 */
+  padding: 0; /* 去除内边距 */
+  z-index: 1; /* 添加 z-index 属性，提高层级 */
+  display: flex; /* 新增：使用flex布局 */
+  justify-content: center; /* 新增：水平居中 */
+  align-items: center; /* 新增：垂直居中 */
+}
+
+.cancel-btn image {
+  width: 100%; /* 图片宽度 */
+  height: 100%; /* 图片高度 */
+  object-fit: contain; /* 新增：确保图片完整显示 */
+}
+
+/* 轮播图 */
+.banner { 
+  height: 350rpx; 
+  margin: 20rpx 30rpx;
+  position: relative;
+  z-index: 1;
+  border-radius: 15rpx;
+  overflow: hidden;
+  box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, 0);
+}
+
+
+
+.banner-img { width: 100%; height: 100%; }
+
+/* 分类导航 */
+.category-row {
+  display: flex;
+  justify-content: space-around;
+  padding: 30rpx 0;
+  background: rgb(255, 255, 255);
+  margin: 0 30rpx;
+  border-radius: 20rpx;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+/* 新增标题装饰条样式 */
+.section-title-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.section-title-decor {
+  width: 8rpx;
+  height: 32rpx;
+  background: linear-gradient(to bottom, #0D47A1, #5B21B6); /* 蓝紫渐变 */
+  border-radius: 4rpx;
+  margin-right: 12rpx;
+}
+
+/* 调整标题样式 */
+.section-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120rpx; /* 每个分类项的宽度 */
+  margin: 0 10rpx; /* 左右间距 */
+}
+
+.category-icon {
+  width: 88rpx; /* 图标宽度 */
+  height: 88rpx; /* 图标高度 */
+  border-radius: 44rpx; /* 保持圆形，为宽高的一半 */
+  margin-bottom: 12rpx;
+  object-fit: cover; /* 关键属性：确保图片覆盖整个容器 */
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.15);
+}
+
+.category-label {
+  font-size: 24rpx;
+  color: #555;
+  text-align: center;
+  white-space: nowrap; /* 防止文字换行 */
+  overflow: hidden; /* 超出部分隐藏 */
+  text-overflow: ellipsis; /* 超出部分显示省略号 */
+  max-width: 1000rpx; /* 限制文字最大宽度 */
+}
+/* 课程模块 */
+.section {
+  margin: 30rpx;
+  background: rgba(255, 255, 255, 0.801); /* 半透明白色 */
+  border-radius: 20rpx;
+  padding: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rpx;
+  color: rgb(18, 5, 134); 
+
+}
+
+.section-title { 
+  font-size: 32rpx; 
+  font-weight: 600;
+  color: rgb(18, 5, 134); 
+}
+
+.section-more { 
+  font-size: 28rpx; 
+  color: #660cdb;
+  cursor: pointer;
+}
+
+.tag-row {
+  display: flex;
+  gap: 10rpx;
+  margin-top: 10rpx;
+}
+
+.tag {
+  font-size: 24rpx;
+  color: #666;
+  padding: 5rpx 15rpx;
+  background: #f0f0f0;
+  border-radius: 15rpx;
+}
+
+.course-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 20rpx;
+  padding: 10rpx 0;
+  white-space: nowrap;
+}
+
+.course-card {
+  width: 650rpx;
+  background: white;
+  border-radius: 12rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.15);
+  padding: 10rpx;
+  text-align: center;
+  position: relative;
+}
+
+.course-cover {
+  width: 280rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.course-title { 
+  font-size: 28rpx; 
+  font-weight: 600;
+  margin-bottom: 5rpx; 
+}
+
+.course-meta { 
+  font-size: 24rpx; 
+  color: #999;
+}
+
+/* 课程标题旁小标签 */
+.course-tag {
+  position: absolute;
+  top: 10rpx;
+  left: 10rpx;
+  background: #0004ea;
+  color: white;
+  padding: 4rpx 8rpx;
+  border-radius: 6rpx;
+  font-size: 20rpx;
+}
+
+
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-icon { 
+  width: 40rpx; 
+  height: 40rpx; 
+  margin-bottom: 5rpx; 
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.15);
+}
+
+.nav-label { font-size: 24rpx; color: #666; }
+
+/* 导航点击动效 */
+.nav-item:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+}
+
+/* 课程卡片点击动效 */
+.course-card:active .course-cover {
+  transform: translateY(-10rpx);
+}
+
+.course-card:active::after {
+  content: '进入学习';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10rpx 20rpx;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+}
+.page-container {
+  padding-bottom: 120rpx; /* 留出 tabBar 空间 */
+}

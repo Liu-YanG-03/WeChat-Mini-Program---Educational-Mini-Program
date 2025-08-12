@@ -1,0 +1,36 @@
+<!-- pages/course/list.wxml -->
+<view class="page">
+  <!-- 顶部蓝紫渐变背景 -->
+  <view class="top-gradient"></view>
+  
+  <!-- 顶部搜索栏 - 无提醒按钮 -->
+  <view class="top-bar">
+    <view class="search-wrap">
+      <image class="search-icon" src="https://gitee.com/Liu-YanGG-Bond/educational-we-chat-mini-programs/raw/master/search.png" mode="aspectFill" />
+      <input class="search-input" placeholder="课程搜索" bindinput="onSearchInput" />
+    </view>
+  </view>
+
+
+  <!-- 四象限布局 -->
+  <view class="course-grid">
+    <view
+  class="course-item"
+  wx:for="{{courseList}}"
+  wx:key="id"
+  wx:for-item="item"
+  wx:for-index="index"
+  bindtap="gotoStudy"
+  data-id="{{item.id}}"
+>
+      <image class="course-img" src="{{item.cover}}" />
+      <view class="course-info">
+        <text class="course-title">{{item.title}}</text>
+        <view class="meta-container">
+          <text class="subject-tag">{{item.subject}}</text>
+          <text class="student-count">{{item.students}}人学习</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+<view class="card" bindtap="navToDetail" data-id="{{item.id}}">
+  <image class="cover" src="{{item.cover}}" mode="aspectFill"/>
+  <view class="badge">
+    <text wx:if="{{item.isHot}}" class="hot">热门</text>
+    <text wx:if="{{item.isFree}}" class="free">免费</text>
+  </view>
+  <text class="title">{{item.title}}</text>
+</view>

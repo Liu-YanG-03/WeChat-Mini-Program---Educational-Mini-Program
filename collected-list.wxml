@@ -1,0 +1,39 @@
+<!-- pages/course/collected-list.wxml -->
+<view class="page">
+  <!-- 顶部蓝紫渐变背景 -->
+  <view class="top-gradient"></view>
+  
+  <!-- 顶部搜索栏 - 无提醒按钮，添加取消按钮 -->
+  <view class="top-bar">
+    <view class="search-wrap">
+      <image class="search-icon" src="https://gitee.com/Liu-YanGG-Bond/educational-we-chat-mini-programs/raw/master/search.png" mode="aspectFill" />
+      <input class="search-input" placeholder="课程搜索" bindinput="onSearchInput" bindfocus="onSearchFocus" />
+      <!-- 添加取消按钮 -->
+      <button class="cancel-btn" bindtap="onCancelSearch">
+        <image src="https://gitee.com/Liu-YanGG-Bond/educational-we-chat-mini-programs/raw/master/cancel.png" mode="aspectFill" />
+      </button>
+    </view>
+  </view>
+
+  <!-- 一行两列布局 -->
+  <view class="course-grid">
+    <view
+      class="course-item"
+      wx:for="{{collectedCourses}}"
+      wx:key="id"
+      wx:for-item="item"
+      wx:for-index="index"
+      bindtap="gotoStudy"
+      data-id="{{item.id}}"
+      style="{{index % 2 === 0 ? 'margin-right: 1%;' : 'margin-left: 1%;'}}"> <!-- 修改间距 -->
+      <image class="course-img" src="{{item.cover}}" />
+      <view class="course-info">
+        <text class="course-title">{{item.title}}</text>
+        <view class="meta-container">
+          <text class="subject-tag">{{item.subject}}</text>
+          <text class="student-count">{{item.students}}人学习</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

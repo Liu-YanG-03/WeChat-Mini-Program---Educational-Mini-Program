@@ -1,0 +1,124 @@
+/* pages/course/list.wxss */
+.page {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0D47A1, #5B21B6); /* 全局蓝紫渐变背景 */
+}
+
+/* 顶部区域 - 增加透明度渐变，使顶部颜色更深 */
+.top-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 600rpx;
+  background: linear-gradient(to bottom, rgba(9, 35, 82, 0.8), transparent);
+  z-index: 0;
+}
+
+/* 顶部搜索栏 - 与首页完全一致 */
+.top-bar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center; /* 居中显示搜索框 */
+  padding: 20rpx 30rpx;
+  padding-top: 40rpx; /* 适配刘海屏 */
+  color: white;
+}
+
+.search-wrap {
+  display: flex;
+  align-items: center;
+  width: 600rpx !important; /* 固定宽度 */
+  height: 70rpx;
+  background: rgba(255, 255, 255, 0.95); /* 半透明白色 */
+  border-radius: 35rpx;
+  padding: 0 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.15); 
+}
+
+.search-icon { 
+  width: 40rpx; 
+  height: 40rpx; 
+  margin-right: 10rpx; 
+}
+
+.search-input { 
+  flex: 1; 
+  font-size: 28rpx; 
+  color: #333; 
+  background: transparent;
+  border: none;
+}
+
+.search-input::placeholder { 
+  color: #999; 
+}
+
+
+.course-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20rpx;
+}
+
+.course-item {
+  width: 48%;
+  margin-bottom: 20rpx;
+  background: #fff;
+  border-radius: 12rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.course-img {
+  width: 100%;
+  height: 240rpx;
+  border-radius: 12rpx 12rpx 0 0;
+}
+
+.course-info {
+  padding: 16rpx;
+}
+
+.course-title {
+  font-size: 28rpx;
+  color: #333;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.meta-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subject-tag {
+  padding: 6rpx 12rpx;
+  background: #f0f7ff;
+  color: #1890ff;
+  border-radius: 8rpx;
+  font-size: 24rpx;
+}
+
+.student-count {
+  font-size: 24rpx;
+  color: #999;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 20rpx 0;
+  background: white;
+  border-top: 1rpx solid #eee;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+}

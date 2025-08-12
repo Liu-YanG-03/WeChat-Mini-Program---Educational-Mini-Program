@@ -1,0 +1,173 @@
+.page-container {
+  /* 从金色到深蓝色的渐变背景 */
+  background: linear-gradient(135deg, #593ae2 0%, #1b049e 100%);
+  min-height: 100vh;
+  padding-bottom: 120rpx;
+}
+
+/* VIP头部添加阴影和光泽效果 */
+.vip-header {
+  /* 使用金色背景 */
+  background: radial-gradient(circle, #593ae2 0%, #1b049e 100%);
+  padding: 40rpx 32rpx;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.3), 
+              0 0 30rpx rgba(255, 255, 255, 0.5) inset; /* 内发光效果增强 */
+  position: relative;
+  overflow: hidden;
+}
+
+/* 新增光晕效果 */
+.vip-icon-halo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300rpx;
+  height: 300rpx;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
+  pointer-events: none;
+}
+
+.vip-icon {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 auto 20rpx;
+  position: relative;
+  z-index: 1;
+}
+
+.vip-title {
+  font-size: 36rpx;
+  font-weight: 600;
+  margin-bottom: 10rpx;
+  /* 使用更具质感的金色 */
+  color: #daa520; 
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.3);
+  /* 自定义 "尊贵 VIP 会员" 文字位置，可根据需要调整 */
+  position: relative;
+  left: -300rpx; 
+  top: -20rpx; 
+}
+
+.vip-level {
+  font-size: 30rpx;
+  /* 使用更具质感的金色 */
+  color: #daa520; 
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.3);
+  position: relative;
+  left: -220rpx; 
+  top: -150rpx; 
+}
+
+.vip-benefits {
+  padding: 32rpx;
+  /* 半透明白色背景，增加模糊效果 */
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(5rpx);
+  margin-top: 24rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
+}
+
+.section-header {
+  margin-bottom: 24rpx;
+}
+
+.section-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  /* 使用更具质感的金色 */
+  color: #f3cf02; 
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.3);
+  /* 自定义 "专属权益" 文字位置，可根据需要调整 */
+  position: relative;
+  left: 40rpx; 
+  top: 3rpx; 
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+  transition: transform 0.3s ease;
+  /* 调整整个权益项的位置 */
+  margin-left: 200rpx; /* 向左移动20rpx */
+  margin-top: 34rpx;  /* 向上移动10rpx */
+}
+
+.benefit-item:hover {
+  transform: scale(1.05);
+}
+
+.benefit-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+  filter: drop-shadow(0 2rpx 4rpx rgba(0, 0, 0, 0));
+  /* 调整图标的位置 */
+  margin-left: 10rpx; /* 向右移动10rpx */
+  margin-top: 5rpx;   /* 向下移动5rpx */
+}
+
+.benefit-text {
+  font-size: 28rpx;
+  color: rgb(255, 255, 255); /* 文字使用白色 */
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.288);
+  /* 调整文字的位置 */
+  margin-left: 15rpx; /* 向右移动15rpx */
+  margin-top: 8rpx;   /* 向下移动8rpx */
+}
+
+.vip-expiry {
+  padding: 32rpx;
+  /* 半透明白色背景，增加模糊效果 */
+  background: rgba(255, 255, 255, 0.1); 
+  backdrop-filter: blur(5rpx);
+  margin-top: 24rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.expiry-title {
+  font-size: 28rpx;
+  color: rgb(241, 202, 28); /* 文字使用白色 */
+  margin-bottom: 20rpx;
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.3);
+}
+
+.renew-btn {
+  width: 90%;
+  margin: 0 auto;
+  /* 使用金色背景 */
+  background: linear-gradient(135deg, #ffd700, #daa520); 
+  color: #f1f1f1; 
+  font-size: 32rpx;
+  height: 88rpx;
+  border-radius: 44rpx; 
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.3), 
+              0 0 30rpx rgba(216, 208, 208, 0.705) inset; /* 内发光效果增强 */
+  transition: all 0.3s ease; /* 过渡动画 */
+}
+
+.renew-btn:hover {
+  transform: translateY(-3rpx); /* 向上移动 */
+  box-shadow: 0 8rpx 20rpx rgb(255, 255, 255), 
+              0 0 40rpx rgba(255, 255, 255, 0.6) inset; /* 悬停内发光效果增强 */
+}
+
+.vip-privileges {
+  padding: 32rpx;
+  /* 半透明白色背景，增加模糊效果 */
+  background: rgba(69, 6, 243, 0.486); 
+  backdrop-filter: blur(5rpx);
+  margin-top: 24rpx;
+  box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.05);
+}
+
+.privilege-desc {
+  font-size: 28rpx;
+  color: rgb(255, 255, 255); /* 文字使用白色 */
+  line-height: 1.6;
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.877);
+}

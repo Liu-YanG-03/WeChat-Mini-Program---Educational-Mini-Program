@@ -1,0 +1,42 @@
+/* 顶部搜索栏添加光泽效果 */
+.search-wrap {
+  background: rgba(255, 255, 255, 0.95); 
+  border-radius: 35rpx;
+  padding: 0 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.15), 
+              0 0 20rpx rgba(255, 255, 255, 0.3) inset; /* 内发光效果 */
+}
+
+/* 分类导航添加悬停阴影和动画 */
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120rpx; 
+  margin: 0 10rpx; 
+  transition: all 0.3s ease; /* 过渡动画 */
+}
+
+.category-item:hover {
+  transform: translateY(-5rpx); /* 向上移动 */
+  box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, 0.2); /* 悬停阴影 */
+}
+
+/* 课程卡片添加悬停光泽和动画 */
+.course-card {
+  width: 650rpx;
+  background: white;
+  border-radius: 12rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.15);
+  padding: 10rpx;
+  text-align: center;
+  position: relative;
+  transition: all 0.3s ease; /* 过渡动画 */
+}
+
+.course-card:hover {
+  box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, 0.2), 
+              0 0 30rpx rgba(255, 255, 255, 0.5) inset; /* 悬停内发光效果 */
+  transform: scale(1.02); /* 放大效果 */
+}

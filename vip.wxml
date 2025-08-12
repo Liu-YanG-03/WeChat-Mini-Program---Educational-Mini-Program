@@ -1,0 +1,37 @@
+<view class="page-container">
+  <!-- VIP 头部信息 -->
+  <view class="vip-header">
+    <!-- 新增光晕效果 -->
+    <view class="vip-icon-halo"></view> 
+    <image style="width: 225rpx; height: 158rpx; display: inline-block; box-sizing: border-box; left: 160rpx; top: 45rpx" class="vip-icon" src="https://gitee.com/Liu-YanGG-Bond/educational-we-chat-mini-programs/raw/master/vip2.png" mode="aspectFill" />
+    <text class="vip-title">尊贵 VIP 会员</text>
+    <text class="vip-level">VIP {{vipLevel}}</text>
+  </view>
+
+  <!-- VIP 权益展示 -->
+  <view class="vip-benefits">
+    <view class="section-header">
+      <text class="section-title">专属权益</text>
+    </view>
+    <block wx:for="{{benefits}}" wx:key="index">
+      <view class="benefit-item">
+        <image class="benefit-icon" src="{{item.icon}}" mode="aspectFill" />
+        <text class="benefit-text">{{item.text}}</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- 会员到期信息 -->
+  <view class="vip-expiry">
+    <text class="expiry-title">会员到期时间：{{expiryDate}}</text>
+    <button class="renew-btn" bindtap="onRenew">立即续费</button>
+  </view>
+
+  <!-- 会员特权介绍 -->
+  <view class="vip-privileges">
+    <view class="section-header">
+      <text class="section-title">更多特权介绍</text>
+    </view>
+    <text class="privilege-desc">{{privilegeDesc}}</text>
+  </view>
+</view>

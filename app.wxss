@@ -1,0 +1,32 @@
+/* 新增品牌色 */
+:root {
+  --primary-color: #1890ff;
+  --success-color: #52c41a;
+  --text-color: #333;
+  --sub-text-color: #666;
+}
+
+/* 优化文字排版 */
+.text-title {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.text-desc {
+  font-size: 28rpx;
+  color: var(--sub-text-color);
+  line-height: 1.6;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  padding: 20rpx;
+  color: var(--sub-text-color);
+}
+:root {
+  --text-color: #222;
+  --sub-text-color: #666;
+  --primary-color: #4dabf7;
+}

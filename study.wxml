@@ -1,0 +1,56 @@
+<view class="container">
+  <!-- 课程封面 -->
+  <image class="course-cover" src="{{courseDetail.cover}}" mode="aspectFill"></image>
+
+  <!-- 课程信息 -->
+  <view class="course-info">
+    <view class="collect-icon custom-collect-icon" bindtap="toggleCollect">
+      <image src="{{isCollected ? 'https://gitee.com/Liu-YanGG-Bond/educational-we-chat-mini-programs/raw/master/collect_active.png' : 'https://gitee.com/Liu-YanGG-Bond/educational-we-chat-mini-programs/raw/master/collect.png'}}" mode="aspectFill"></image>
+    </view>
+    <text class="course-title">{{courseDetail.title}}</text>
+    <view class="course-meta">
+      <text class="meta-item">讲师：{{courseDetail.teacher}}</text>
+      <text class="meta-item">难度：{{courseDetail.level}}</text>
+      <text class="meta-item">课时：{{courseDetail.duration}}</text>
+    </view>
+    <view class="course-stats">
+      <text class="stats-item">{{courseDetail.students}}人学习</text>
+      <text class="stats-item">评分：{{courseDetail.rating}}</text>
+    </view>
+    <view class="price-wrap">
+      <text class="price">￥{{courseDetail.price}}</text>
+      <button class="buy-btn buy-btn-custom">立即报名</button>
+    </view>
+  </view>
+
+  <!-- 课程简介 -->
+  <view class="section">
+    <text class="section-title">课程简介</text>
+    <text class="section-content">{{courseDetail.description}}</text>
+  </view>
+
+  <!-- 讲师介绍 -->
+  <view class="section">
+    <text class="section-title">讲师介绍</text>
+    <view class="teacher-info">
+<!-- 修改行：添加自定义样式类 teacher-avatar-custom -->
+<image class="teacher-avatar teacher-avatar-custom" src="{{teacher.avatar}}" mode="aspectFill"></image>
+      <view class="teacher-detail">
+        <text class="teacher-name">{{teacher.name}}</text>
+        <text class="teacher-title">{{teacher.title}}</text>
+        <text class="teacher-desc">{{teacher.intro}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 课程大纲 -->
+  <view class="section">
+    <text class="section-title">课程大纲</text>
+    <block wx:for="{{outline}}" wx:key="index">
+      <view class="outline-item">
+        <text class="outline-title">{{item.title}}</text>
+        <text class="outline-time">{{item.time}}</text>
+      </view>
+    </block>
+  </view>
+</view>

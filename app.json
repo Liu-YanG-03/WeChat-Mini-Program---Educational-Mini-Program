@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/course/list/list",
+    "pages/user/center/center",
+    "pages/vip/vip",
+    "pages/course/detail/detail",
+    "pages/login/login",
+    "pages/404/404",
+    "pages/study/study",
+    "pages/course/collected-list"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "线上学习平台",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#FFFFFF",
+    "selectedColor": "#FFFFFF",
+    "backgroundColor": "#120586",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/static/icons/home.png",
+        "selectedIconPath": "/static/icons/home_active.png"
+      },
+      {
+        "pagePath": "pages/course/list/list",
+        "text": "课程",
+        "iconPath": "/static/icons/course.png",
+        "selectedIconPath": "/static/icons/course_active.png"
+      },
+      {
+        "pagePath": "pages/user/center/center",
+        "text": "我的",
+        "iconPath": "/static/icons/user.png",
+        "selectedIconPath": "/static/icons/user_active.png"
+      },
+      {
+        "pagePath": "pages/vip/vip",
+        "text": "会员",
+        "iconPath": "/static/icons/vip.png",
+        "selectedIconPath": "/static/icons/vip_active.png"
+      }
+    ]
+  },
+  "lazyCodeLoading": "requiredComponents"
+}
